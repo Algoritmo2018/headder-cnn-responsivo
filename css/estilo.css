@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Niagenc;
+    src: url("fonts/NIAGENC");
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;/*Faz os itens não aparecerem*/ 
+    transition: all .5s;
+}
+
+nav {
+    background-color: #161616;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+
+.right{
+    margin-left: 35px;
+}
+h1, a {
+    color: white;
+}
+
+nav, ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    font-family: Niagenc;
+    background-color: red;
+}
+
+ 
+
+li:hover, h1:hover, button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+button:focus~ul {
+    height: 405px;
+}
+
+@media (max-width: 1350px) {
+    nav, ul {
+        flex-direction: column;    }
+.right{
+    margin-left: 0px;
+}
+    ul {
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+
+    nav {
+        align-items: flex-start;
+        padding: 0px;
+    }
+
+    h1 {
+        margin: 20px;
+    }
+
+    button {
+        display: flex;
+    }
+
+    li{
+        padding: 5px;
+    }
+
+    li, ul {
+        width: 100%;
+    }
+}
